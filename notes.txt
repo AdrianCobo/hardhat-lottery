@@ -1,0 +1,30 @@
+Anotaciones con el orden a seguir para crear nuevos projectos siguiendo los pasos que hemos usado en este
+
+set up project:
+yarn add --dev hardhat
+yarn hardhat y seleccionar la opcion de empty.hardhat.config
+//añadimos las dependencias
+yarn add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-waffle chai ethereum-waffle hardhat hardhat-contract-sizer hardhat-deploy hardhat-gas-reporter prettier prettier-plugin-solidity solhint solidity-coverage dotenv 
+//añadir los require en hardhat.config.js
+//crear archivo .prettierrc
+//crear carpeta contracts
+yarn add --dev @chainlink/contracts // ya que utilizamos contratos de link para sacar los numeros aleatorios
+sudo yarn global add hardhat-shorthand // podemos escribir ahora en el terminal yarn hardhat compile como hh compile
+//crear carpeta deploy
+//crear archivo .env
+//crear archivo helper-hardhat-config.js
+//en la carpeta contracts, crear la carpeta tests con los mocks a desplegar
+//crear carpeta utils con fichero verify.js
+//crear carpeta test y dentro carpeta unit
+//añadir el gasreporter en hardhat.config.js
+//crear dentro de test la carpeta staging
+{para desplegar los staging test antes tienes que :
+ 0)Obtener ETH and LINK: https://faucets.chain.link/rinkeby
+ 1)Get our SubId for Chainlink VRF: https://vrf.chain.link/
+    //para esto antes tienes que poner el etherscan en harhdat.config.js y crear carpeta utils con script verify.js
+ 2)Deploy our contract using the SubId: yarn hardhat deploy --network rinkeby para esto antes tienes que poner el etherscan en harhdat.config.js
+ 3)Register the contract with Chainlink VRF & it's SubId: añadir la direccion del contrato en la subscripcion como consumidor
+ 4)Register the contract with Chainlink Keepers: https://keepers.chain.link/rinkeby
+ 5)Run staging test}
+
+ //hacer scripts
