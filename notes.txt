@@ -25,6 +25,8 @@ sudo yarn global add hardhat-shorthand // podemos escribir ahora en el terminal 
  2)Deploy our contract using the SubId: yarn hardhat deploy --network rinkeby para esto antes tienes que poner el etherscan en harhdat.config.js
  3)Register the contract with Chainlink VRF & it's SubId: añadir la direccion del contrato en la subscripcion como consumidor
  4)Register the contract with Chainlink Keepers: https://keepers.chain.link/rinkeby
- 5)Run staging test}
+ 5)Run staging test: hh test --network rinkeby}
+ 6)en caso de hacer frontEnd, crear en la carpeta deploy crear un script que actualice las constantes abi y contract en la carpeta constants del
+directorio donde estas desarrollando el front end al ejecutar hh node o hh deploy
 
  //hacer scripts
